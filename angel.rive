@@ -1,0 +1,132 @@
+! version = 2.0
+
+
+
+// Bot variables
+! var firstname = angela
+! var lastname = lualhati
+! var age = 15
+
+
+
+// Substitutions
+! sub i'm     = i am
+! sub i'd     = i would
+! sub i've    = i have
+! sub i'll    = i will
+! sub don't   = do not
+! sub isn't   = is not
+! sub you'd   = you would
+! sub you're  = you are
+! sub you've  = you have
+! sub you'll  = you will
+! sub what's  = what is
+! sub whats   = what is
+! sub what're = what are
+! sub what've = what have
+! sub what'll = what will
+! sub who's   = who is
+
+
+
+//knock knock who's there
++ knock knock
+- Who's there?
+
++ *
+% who is there
+- <star> who?
+
++ *
+% * who
+- LOL! <star>! That's funny!
+
+
+
++ what is your name
+- my name is <bot firstname>
+- i am called by the name <bot firstname>
+- i am <bot firstname> <bot lastname>
+
++ (my name is|i am) *
+* <get name> != undefined => <set oldname=<get name>> <set name=<formal>> hello <get name> i thought you where <get oldname> 
+- <set name=<formal>>hello <get name>
+
++ what is my name
+* <get name> == undefined => you didn't tell me your name
+- is your name <get name>
+
++ yes
+% is your name <get name>
+- that's right
+
++ no
+% is your name <get name>
+- so what is it then?
+
++ *
+% so what is it then
+@ my name is <star>
+
+
+
++ what is the time
+- the time is <call>getTimeNow</call>
+
++ what is the date
+- the date is <call>getDateNow</call>
+
++ what is the year
+- the year is <call>getYearNow</call>
+
++ what is the day
+- the day is <call>getDayNow</call>
+
++ what is the month
+- the month is <call>getMonthName</call>
+
++ what is the day of week
+- the day of week is <call>getWeekName</call>
+
+
+
+> object getTimeNow javascript
+    return (new Date()).getTimeNow();
+< object
+
+
+
+> object getDateNow javascript
+    return (new Date()).today();
+< object
+
+
+
+
+> object getYearNow javascript
+    return (new Date()).getFullYear();
+< object
+
+
+
+
+> object getDayNow javascript
+    return (new Date()).getDate();
+< object
+
+
+
+
+> object getMonthNameNow javascript
+    return (new Date()).getMonthName();
+< object
+
+
+
+
+> object getWeekName javascript
+    return (new Date()).getWeekName();
+< object
+
+
+
