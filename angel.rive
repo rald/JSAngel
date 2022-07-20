@@ -29,7 +29,7 @@
 
 
 
-//knock knock who's there
+// knock knock who's there
 + knock knock
 - Who's there?
 
@@ -42,7 +42,7 @@
 - LOL! <star>! That's funny!
 
 
-
+// about name
 + what is your name
 - my name is <bot firstname>
 - i am called by the name <bot firstname>
@@ -69,7 +69,7 @@
 @ my name is <star>
 
 
-
+// about date and time
 + what is the time
 - the time is <call>getTimeNow</call>
 
@@ -88,41 +88,25 @@
 + what is the day of week
 - the day of week is <call>getWeekName</call>
 
-
-
 > object getTimeNow javascript
     return (new Date()).getTimeNow();
 < object
-
-
 
 > object getDateNow javascript
     return (new Date()).today();
 < object
 
-
-
-
 > object getYearNow javascript
     return (new Date()).getFullYear();
 < object
-
-
-
 
 > object getDayNow javascript
     return (new Date()).getDate();
 < object
 
-
-
-
 > object getMonthNameNow javascript
     return (new Date()).getMonthName();
 < object
-
-
-
 
 > object getWeekName javascript
     return (new Date()).getWeekName();
